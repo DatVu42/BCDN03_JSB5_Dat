@@ -12,6 +12,7 @@
 <body>
     <div class="container">
         <div class="w-75">
+            <!-- Bài 1 -->
             <h2 class="mt-5">QUẢN LÝ TUYỂN SINH</h2>
             <div class="form border-bottom">
                 <div class="row mt-4">
@@ -49,6 +50,23 @@
                 <button onclick="tinhDiemThi()" type="button" class="btn btn-info mt-3">Kết quả</button>
                 <div id="ketQua" class="alert alert-info mt-3"></div>
             </div>
+
+
+            <!-- Bài 2 -->
+            <h2 class="mt-5">TÍNH TIỀN ĐIỆN</h2>
+            <div class="form">
+                <div class="row mt-4">
+                    <div class="col-6">
+                        <input id="name" class="form-control" type="text" placeholder="Nhập họ tên">
+                    </div>
+                    <div class="col-6">
+                        <input id="kw" class="form-control" type="number" placeholder="Nhập số Kw">
+                    </div>
+                </div>
+                
+                <button onclick="tinhTienDien()" type="button" class="btn btn-info mt-3">Tính tiền điện</button>
+                <div id="info" class="alert alert-info mt-3"></div>
+            </div>
         </div>
     </div>
     
@@ -59,6 +77,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
 
     <script src="./js/quanLyTuyenSinh.js"></script>
-    <script src="./js/temp.js"></script>
+    <script src="./js/tinhTienDien.js"></script>
 </body>
 </html>
