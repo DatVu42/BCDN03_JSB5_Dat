@@ -8,64 +8,132 @@
 
     <!-- BS4 -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
     <div class="container">
-        <div class="w-75">
-            <!-- Bài 1 -->
-            <h2 class="mt-5">QUẢN LÝ TUYỂN SINH</h2>
-            <div class="form border-bottom">
-                <div class="row mt-4">
-                    <div class="col-4">
-                        <input id="diemChuan" class="form-control" type="number" placeholder="Điểm chuẩn">
-                    </div>
-                    <div class="col-4">
-                        <select class="form-control" id="khuVuc">
-                            <option>--Chọn khu vực--</option>
-                            <option value="A">A</option>
-                            <option value="B">B</option>
-                            <option value="C">C</option>
-                        </select>
-                    </div>
-                    <div class="col-4">
-                        <select class="form-control" id="doiTuong">
-                            <option>--Chọn đối tượng--</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="row mt-3">
-                    <div class="col-4">
-                        <input id="diemMon1" class="form-control" type="number" placeholder="Điểm môn 1">
-                    </div>
-                    <div class="col-4">
-                        <input id="diemMon2" class="form-control" type="number" placeholder="Điểm môn 2">
-                    </div>
-                    <div class="col-4">
-                        <input id="diemMon3" class="form-control" type="number" placeholder="Điểm môn 3">
-                    </div>
-                </div>
-                <button onclick="tinhDiemThi()" type="button" class="btn btn-info mt-3">Kết quả</button>
-                <div id="ketQua" class="alert alert-info mt-3"></div>
+        <div class="row my-5">
+            <div class="col-3">
+              <div class="nav flex-column nav-pills" id="v-pills-tab">
+                <a class="nav-link active" id="bai1-tab" data-toggle="pill" href="#bai1">Bài 1</a>
+                <a class="nav-link" id="bai2-tab" data-toggle="pill" href="#bai2">Bài 2</a>
+                <a class="nav-link" id="bai3-tab" data-toggle="pill" href="#bai3">Bài 3</a>
+                <a class="nav-link" id="bai4-tab" data-toggle="pill" href="#bai4">Bài 4</a>
+              </div>
             </div>
-
-
-            <!-- Bài 2 -->
-            <h2 class="mt-5">TÍNH TIỀN ĐIỆN</h2>
-            <div class="form">
-                <div class="row mt-4">
-                    <div class="col-6">
-                        <input id="name" class="form-control" type="text" placeholder="Nhập họ tên">
-                    </div>
-                    <div class="col-6">
-                        <input id="kw" class="form-control" type="number" placeholder="Nhập số Kw">
+            <div class="col-9">
+              <div class="tab-content" id="v-pills-tabContent">
+                <!-- Bài 1 -->
+                <div class="tab-pane fade show active" id="bai1">
+                    <h2>QUẢN LÝ TUYỂN SINH</h2>
+                    <div class="form">
+                        <div class="row mt-4">
+                            <div class="col-4">
+                                <input id="diemChuan" class="form-control" type="number" placeholder="Điểm chuẩn">
+                            </div>
+                            <div class="col-4">
+                                <select class="form-control" id="khuVuc">
+                                    <option>--Chọn khu vực--</option>
+                                    <option value="A">A</option>
+                                    <option value="B">B</option>
+                                    <option value="C">C</option>
+                                </select>
+                            </div>
+                            <div class="col-4">
+                                <select class="form-control" id="doiTuong">
+                                    <option>--Chọn đối tượng--</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col-4">
+                                <input id="diemMon1" class="form-control" type="number" placeholder="Điểm môn 1">
+                            </div>
+                            <div class="col-4">
+                                <input id="diemMon2" class="form-control" type="number" placeholder="Điểm môn 2">
+                            </div>
+                            <div class="col-4">
+                                <input id="diemMon3" class="form-control" type="number" placeholder="Điểm môn 3">
+                            </div>
+                        </div>
+                        <button onclick="tinhDiemThi()" type="button" class="btn btn-info mt-3">Kết quả</button>
+                        <div id="ketQua" class="alert alert-info mt-3"></div>
                     </div>
                 </div>
-                
-                <button onclick="tinhTienDien()" type="button" class="btn btn-info mt-3">Tính tiền điện</button>
-                <div id="info" class="alert alert-info mt-3"></div>
+
+                <!-- Bài 2 -->
+                <div class="tab-pane fade" id="bai2">
+                    <h2>TÍNH TIỀN ĐIỆN</h2>
+                    <div class="form">
+                        <div class="row mt-4">
+                            <div class="col-6">
+                                <input id="name" class="form-control" type="text" placeholder="Nhập họ tên">
+                            </div>
+                            <div class="col-6">
+                                <input id="kw" class="form-control" type="number" placeholder="Nhập số Kw">
+                            </div>
+                        </div>
+                        
+                        <button onclick="tinhTienDien()" type="button" class="btn btn-info mt-3">Tính tiền điện</button>
+                        <div id="info" class="alert alert-info mt-3"></div>
+                    </div>
+                </div>
+
+                <!-- Bài 3 -->
+                <div class="tab-pane fade" id="bai3">
+                    <h2>TÍNH THUẾ THU NHẬP CÁ NHÂN</h2>
+                    <div class="form">
+                        <div class="row mt-4">
+                            <div class="col-4">
+                                <input id="name" class="form-control" type="text" placeholder="Nhập họ tên">
+                            </div>
+                            <div class="col-4">
+                                <input id="income" class="form-control" type="number" placeholder="Tổng thu nhập năm">
+                            </div>
+                            <div class="col-4">
+                                <input id="dependent" class="form-control" type="number" placeholder="Số người phụ thuộc">
+                            </div>
+                        </div>
+                        
+                        <button onclick="perIncTax()" type="button" class="btn btn-info mt-3">Tính tiền thuế</button>
+                        <div id="result" class="alert alert-info mt-3"></div>
+                    </div>
+                </div>
+
+                <!-- Bài 4 -->
+                <div class="tab-pane fade" id="bai4">
+                    <h2>TÍNH TIỀN CÁP</h2>
+                    <div class="form">
+                        <div class="row mt-4">
+                            <div class="col-4">
+                                <select class="form-control" id="loaiKH" onchange="toggleSoKetNoi()">
+                                    <option value="">-- Chọn loại khách hàng --</option>
+                                    <option value="nhaDan">Nhà dân</option>
+                                    <option value="doanhNghiep">Doanh nghiệp</option>
+                                </select>
+                            </div>
+                            <div class="col-4">
+                                <input id="maKH" class="form-control" type="text" placeholder="Nhập mã khách hàng">
+                            </div>
+                            <div class="col-4">
+                                <input id="soKenhCaoCap" class="form-control" type="number" placeholder="Số kênh cao cấp">
+                            </div>
+                        </div>
+                        <div class="row mt-4">
+                            <div class="col-4">
+                                <input id="soKetNoi" class="form-control soKetNoi" type="number" placeholder="Số kết nối">
+                            </div>
+                        </div>
+                        
+                        <button onclick="tinhHDKH()" type="button" class="btn btn-info mt-3">Tính tiền cáp</button>
+                        <div id="tienCap" class="alert alert-info mt-3"></div>
+                    </div>
+                </div>
+              </div>
             </div>
         </div>
     </div>
@@ -78,5 +146,7 @@
 
     <script src="./js/quanLyTuyenSinh.js"></script>
     <script src="./js/tinhTienDien.js"></script>
+    <script src="./js/personalIncomeTax.js"></script>
+    <script src="./js/tinhTienCap.js"></script>
 </body>
 </html>
